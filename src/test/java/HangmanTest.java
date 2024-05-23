@@ -5,14 +5,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class HangmanTest {
-    // TODO: Uncomment the test contents and implement in Hangman the things that have been demonstrated by the trainers.
+
     @Test
     public void getSolution_returnsSolution() {
         Hangman hangman = new Hangman("admin");
         String solution = hangman.getSolution();
         assertThat(solution).isEqualTo("admin");
     }
-
 
 
     @Test
@@ -39,19 +38,22 @@ public class HangmanTest {
     @Test
     public void checkIfValidInput_inputIsNumber_badInput(){
         String input = "d4d";
-        assertThat(Game.checkIfValidInput(input)).isEqualTo(false);
+        Game game = new Game();
+        assertThat(game.checkIfValidInput(input)).isEqualTo(false);
 
     }
     @Test
     public void checkIfValidInput_inputIsChar_corectInput(){
         String input = "d";
-        assertThat(Game.checkIfValidInput(input)).isEqualTo(true);
+        Game game = new Game();
+        assertThat(game.checkIfValidInput(input)).isEqualTo(true);
     }
 
     @Test
     public void checkIfValidInput_inputIsString_corectInput(){
         String input = "dadsawe";
-        assertThat(Game.checkIfValidInput(input)).isEqualTo(true);
+        Game game = new Game();
+        assertThat(game.checkIfValidInput(input)).isEqualTo(true);
     }
 
     @Test
@@ -98,16 +100,10 @@ public class HangmanTest {
 
 
 
-
-
-
-
-
-
-    // TODO: TDD!:
+    // Test Driven Development:
     //       1) What else do you want Hangman to do? -> Formulate it as a test.
     //       2) Implement in Hangman what is needed to make the test green.
     //       3) Refactor.
     //       4) Continue at 1)
-    // HINT: If it is to big a challenge, go through the LearningTest, first, to get acquainted with the syntax.
+
 }

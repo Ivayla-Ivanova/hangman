@@ -1,12 +1,4 @@
-import java.util.Arrays;
 
-/**
- * Wording:
- * solution                 Lösung (Lösungswort)
- * partlyRevealedSolution   teilweise aufgedeckte Lösung (z.B. "ha--o")
- * hangmanPicture           Bild vom Galgenmännchen
- * guessedCharacter         geratener Buchstabe
- **/
 public class Hangman {
 
     String DASH = "-";
